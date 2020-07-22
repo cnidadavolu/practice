@@ -1,4 +1,4 @@
-package com.learn.demorest.restful.user;
+package com.learn.demorest.restful.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

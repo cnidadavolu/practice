@@ -2,12 +2,14 @@ package com.learn.demorest.restful.user;
 
 import lombok.Builder;
 
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Builder
 public class User {
 
     private Integer id;
+    @Size(min=2, message = "name should have atleast 2 characters")
     private String name;
     private Date birthDate;
 

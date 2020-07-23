@@ -2,6 +2,8 @@ package com.learn.demorest.restful.user;
 
 import com.learn.demorest.restful.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import java.util.Locale;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -20,6 +23,21 @@ public class UserController {
 
     @Autowired
     private UserDAOService userDAOService;
+
+
+    @Autowired
+    private MessageSource messageSource;
+
+    @GetMapping(path = "hello-world-internationalized")
+    public String helloWorldInternationalized(@RequestHeader(name = "Accept-Language", required = false) Locale locale){
+        return messageSource.getMessage("good.morning.message",null,locale);
+    }
+
+    // we don't need to pass the location LocaleContextHolder handles it
+    @GetMapping(path = "hello-world-internationalized-holder")
+    public String helloWorldInternationalizedNoPassing(@RequestHeader(name = "Accept-Language", required = false) Locale locale){
+        return messageSource.getMessage("good.morning.message",null, LocaleContextHolder.getLocale());
+    }
 
     @PostMapping(path = "/users")
     public ResponseEntity createUser(@Valid @RequestBody User user) {

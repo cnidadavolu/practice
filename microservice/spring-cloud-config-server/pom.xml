@@ -12,11 +12,19 @@
 	<artifactId>spring-cloud-config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-cloud-config-server</name>
-	<description>Demo project for Spring Boot Micro service</description>
+	<description>Demo project for Spring Boot</description>
+
+<!--	<properties>-->
+<!--		<java.version>11</java.version>-->
+<!--		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>-->
+<!--	</properties>-->
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+		<spring-cloud.version>Hoxton.SR5</spring-cloud.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -29,7 +37,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

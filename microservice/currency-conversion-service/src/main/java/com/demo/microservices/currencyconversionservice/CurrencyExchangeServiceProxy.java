@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RibbonClient(name="currency-exchange-service")
 public interface CurrencyExchangeServiceProxy {
 
-    @GetMapping("/currency-exchange/from/{from}/to/{to}")
+ //   @GetMapping("/currency-exchange/from/{from}/to/{to}")
+    @GetMapping("currency-exchange-service/currency-exchange/from/{from}/to/{to}")  // configuring with Zuul API Gateway changing /URI to {Service-name}/uri
     public CurrencyConversionBean retrieveExchangeValue(@PathVariable String from, @PathVariable String to);
 
 

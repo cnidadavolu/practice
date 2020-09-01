@@ -11,6 +11,8 @@ public class RomanToInt {
         int len = s.length();
         int sum = 0;
         int[] inputVal = new int[len];
+        System.out.println(s.charAt(0));
+
 
         for(int i=0; i < len; i++){
             switch(s.charAt(i)){
@@ -54,12 +56,12 @@ public class RomanToInt {
 //         myMap.put('C',100);
 //         myMap.put('D',500);
 //         myMap.put('M',1000);
-
+//
 //         int len = s.length();
 //         int sum = myMap.get(s.charAt(len-1));
-
+//
 //         for(int i=0; i < len-1; i++){
-
+//
 //             if(myMap.get(s.charAt(i)) >= myMap.get(s.charAt(i+1))){
 //                 sum += myMap.get(s.charAt(i));
 //             }else{

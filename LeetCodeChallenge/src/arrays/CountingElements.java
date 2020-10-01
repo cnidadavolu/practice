@@ -17,8 +17,9 @@ public class CountingElements {
         }
         return count;
     }
+
     public static void main(String[] args) {
-        int[] arr = {1,1,2,2}; //{1, 3, 2, 3, 5, 0};
+        int[] arr = {1, 1, 2, 2}; //{1, 3, 2, 3, 5, 0};
         System.out.println(countElements(arr));
     }
 }

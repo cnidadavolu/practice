@@ -10,7 +10,7 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
 public class BuyAndSellStocks {
 
     public static void main(String args[]) {
-        int [] prices = {7,1,5,3,6,4}; //{1,2,3,4,5} --- {7,6,4,3,1}
+        int[] prices = {7, 1, 5, 3, 6, 4}; //{1,2,3,4,5} --- {7,6,4,3,1}
         System.out.println(maxProfit(prices));
     }
 

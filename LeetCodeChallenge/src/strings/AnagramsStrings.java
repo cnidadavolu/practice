@@ -16,6 +16,8 @@ public class AnagramsStrings {
         //     return false;
         // }
 
+        int i;
+
         // if(s == null && t == null){
         //     return true;
         // }
@@ -28,6 +30,8 @@ public class AnagramsStrings {
         Arrays.sort(cs);
 
         char[] ct = t.toCharArray();
+        System.out.println(ct);
+        System.out.println(String.valueOf(ct));
         Arrays.sort(ct);
 
         // if(Arrays.equals(cs,ct)){

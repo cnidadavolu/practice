@@ -16,10 +16,12 @@ public class HashMapDesign {
 
         Map<String, String> map = new HashMap(); //{ {"abc",2}, {3,4} }
     }
+
     List<Pairs> myList = new ArrayList<>();
-    public void put(int key, int val){
-        for(Pairs pair : myList){
-            if(pair.key == key){
+
+    public void put(int key, int val) {
+        for (Pairs pair : myList) {
+            if (pair.key == key) {
                 pair.val = val;
                 return;
             }
@@ -31,17 +33,17 @@ public class HashMapDesign {
         myList.add(myPair);
     }
 
-    public int get(int key){
-        for (Pairs k : myList){
-            if(k.key == key){
+    public int get(int key) {
+        for (Pairs k : myList) {
+            if (k.key == key) {
                 return k.val;
             }
         }
         return -1;
     }
 
-    public void remove(int key){
-        for(int i =0; i < myList.size(); i++){
+    public void remove(int key) {
+        for (int i = 0; i < myList.size(); i++) {
             if (myList.get(i).key == key) {
                 myList.remove(i);
             }

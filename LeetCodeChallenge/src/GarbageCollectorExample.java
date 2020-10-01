@@ -1,3 +1,5 @@
+import java.lang.Throwable;
+
 public class GarbageCollectorExample {
 
     public static void main(String[] args) {
@@ -5,12 +7,13 @@ public class GarbageCollectorExample {
         GarbageCollectorExample gc2 = new GarbageCollectorExample();
 
         gc1 = null;
-     //   System.gc();
+        System.gc();
+        System.out.println("gc1" + gc1);
 
         GarbageCollectorExample gc3 = new GarbageCollectorExample();
 
         gc2 = null;
-           Runtime.getRuntime().gc();
+        Runtime.getRuntime().gc();
         //System.gc();
     }
 

@@ -5,7 +5,7 @@ public class ProductArray {
     /* Driver program to test above functions */
     public static void main(String[] args) {
         ProductArray pa = new ProductArray();
-        int arr[] = {1,2,3,4}; // {10, 3, 5, 6, 2};
+        int arr[] = {1, 2, 3, 4}; // {10, 3, 5, 6, 2};
         int n = arr.length;
         System.out.println("The product array is : ");
         pa.productArray(arr, n);

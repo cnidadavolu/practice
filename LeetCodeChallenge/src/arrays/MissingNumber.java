@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class MissingNumber {
 
     public static void main(String[] args) {
-        int [] nums = {3,0,1};
+        int[] nums = {3, 0, 1};
         MissingNumber mn = new MissingNumber();
         System.out.println(mn.missingNumber(nums));
 
@@ -15,13 +15,13 @@ public class MissingNumber {
     public int missingNumber(int[] nums) {
 
         HashMap<Character, Integer> myMap = new HashMap();
-        myMap.put('a',1);
+        myMap.put('a', 1);
         Arrays.sort(nums);
         int len = nums.length;
-        int maxVal = nums[len-1];
+        int maxVal = nums[len - 1];
         int i = maxVal;
-        while (i >= 0){
-            if(!Arrays.asList(nums).contains(i)){
+        while (i >= 0) {
+            if (!Arrays.asList(nums).contains(i)) {
                 return i;
             }
             i--;
@@ -34,10 +34,6 @@ public class MissingNumber {
 //        }
         return -1;
     }
-
-
-
-
 
 
 }

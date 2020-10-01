@@ -5,7 +5,7 @@ public class DecompressRunLengthEncode {
     public static void main(String[] args) {
         DecompressRunLengthEncode dc = new DecompressRunLengthEncode();
         int[] nums = {1, 2, 3, 4};
-   //     int[] res = dc.decompressRLElist(nums);
+        //     int[] res = dc.decompressRLElist(nums);
         for (int num : dc.decompressRLElist(nums)) {
             System.out.println(num);
         }
@@ -13,16 +13,16 @@ public class DecompressRunLengthEncode {
 
     public int[] decompressRLElist(int[] nums) {
 
-        int len=0;
-        for(int i=0;i< nums.length;i+=2){
-            len+=nums[i];
+        int len = 0;
+        for (int i = 0; i < nums.length; i += 2) {
+            len += nums[i];
         }
         int[] result = new int[len];
-        int k,j=0;
-        for(int i =0; i < nums.length; i+=2){
-            k=0;
-            while (k < nums[i]){
-                result[j] = nums[i+1];
+        int k, j = 0;
+        for (int i = 0; i < nums.length; i += 2) {
+            k = 0;
+            while (k < nums[i]) {
+                result[j] = nums[i + 1];
                 k++;
                 j++;
             }

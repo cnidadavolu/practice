@@ -16,7 +16,7 @@ public class UniqueCharacter {
         HashMap<Character, Integer> myMap = new HashMap();
         char[] charArr = s.toCharArray();
 
-        if(charArr.length == 0 || s.equals("")){
+        if (charArr.length == 0 || s.equals("")) {
             return -1;
         }
 
@@ -29,11 +29,11 @@ public class UniqueCharacter {
 //                myMap.put(ch, ++count);
 //            }
 //        }
-        for(int i=0; i < charArr.length; i++){
-            myMap.put(charArr[i], myMap.getOrDefault(charArr[i],0)+1);
+        for (int i = 0; i < charArr.length; i++) {
+            myMap.put(charArr[i], myMap.getOrDefault(charArr[i], 0) + 1);
         }
 
-        LinkedList <String> llist = new LinkedList<>();
+        LinkedList<String> llist = new LinkedList<>();
         llist.add("chai");
 //        llist.add("chaitanya")
 

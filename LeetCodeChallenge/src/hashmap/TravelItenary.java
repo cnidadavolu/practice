@@ -33,7 +33,7 @@ public class TravelItenary {
         tickets.add(tick2);
         tickets.add(tick3);
         List<String> itinerary = findItinerary(tickets);
-        for(String it : itinerary){
+        for (String it : itinerary) {
             System.out.println(it);
         }
 

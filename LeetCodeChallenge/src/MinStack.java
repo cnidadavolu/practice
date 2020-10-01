@@ -4,6 +4,7 @@ class MinStack {
 
     Stack<Integer> tempStack = new Stack();
     Stack<Integer> minStack = new Stack();
+
     /**
      * initialize your data structure here.
      */

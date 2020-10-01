@@ -7,18 +7,18 @@ public class LengthOfSubStringWithoutRepeatChar {
 
     public int lengthOfLongestSubstring(String s) {
 
-        int start=0, len =0;
-        HashMap<Character,Integer> myMap = new HashMap();
+        int start = 0, len = 0;
+        HashMap<Character, Integer> myMap = new HashMap();
 
-        for(int i=0; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if(myMap.containsKey(ch)){
-                if(myMap.get(ch) >= start){
-                    start = myMap.get(ch)+1;
+            if (myMap.containsKey(ch)) {
+                if (myMap.get(ch) >= start) {
+                    start = myMap.get(ch) + 1;
                 }
             }
-            len = Math.max(len,i-start+1);
-            myMap.put(ch,i);
+            len = Math.max(len, i - start + 1);
+            myMap.put(ch, i);
         }
         return len;
     }

@@ -6,6 +6,7 @@ public class RomanToInt {
         RomanToInt rToI = new RomanToInt();
         System.out.println(rToI.romanToInt(s));
     }
+
     public int romanToInt(String s) {
 
         int len = s.length();
@@ -14,8 +15,8 @@ public class RomanToInt {
         System.out.println(s.charAt(0));
 
 
-        for(int i=0; i < len; i++){
-            switch(s.charAt(i)){
+        for (int i = 0; i < len; i++) {
+            switch (s.charAt(i)) {
                 case 'I':
                     inputVal[i] = 1;
                     break;
@@ -40,10 +41,10 @@ public class RomanToInt {
             }
         }
 
-        for(int i=0; i< len -1; i++){
-            if(inputVal[i] >= inputVal[i+1]){
+        for (int i = 0; i < len - 1; i++) {
+            if (inputVal[i] >= inputVal[i + 1]) {
                 sum += inputVal[i];
-            }else{
+            } else {
                 sum -= inputVal[i];
             }
         }
@@ -69,6 +70,6 @@ public class RomanToInt {
 //             }
 //         }
 //        return sum;
-        return sum+=inputVal[inputVal.length-1];
+        return sum += inputVal[inputVal.length - 1];
     }
 }

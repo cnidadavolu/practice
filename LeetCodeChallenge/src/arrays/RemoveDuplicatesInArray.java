@@ -7,7 +7,7 @@ public class RemoveDuplicatesInArray {
 
         RemoveDuplicatesInArray removeDuplicatesInArray = new RemoveDuplicatesInArray();
         int newLen = removeDuplicatesInArray.removeDuplicates(arr);
-        for(int i=0; i < newLen; i++){
+        for (int i = 0; i < newLen; i++) {
             System.out.println(arr[i]);
         }
     }

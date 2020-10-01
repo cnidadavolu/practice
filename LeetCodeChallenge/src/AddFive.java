@@ -48,7 +48,7 @@ public class AddFive {
                 }
             }
         } else {
-           String numStr = String.valueOf(num * -1);
+            String numStr = String.valueOf(num * -1);
             for (int i = 0; i < numStr.length(); i++) {
                 int digit = Integer.parseInt(String.valueOf(numStr.charAt(i)));
                 if (5 < digit) {

@@ -18,16 +18,16 @@ public class TwoSumIndex {
 
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i =0; i < nums.length; i++){
-            map.put(nums[i],i);
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], i);
         }
         // n times
 
 
-        for (int j =0; j< nums.length;j++){
+        for (int j = 0; j < nums.length; j++) {
             int diff = target - nums[j];
-            if(map.containsKey(diff) && map.get(diff) != j){
-                return new int[]{j,map.get(diff)};
+            if (map.containsKey(diff) && map.get(diff) != j) {
+                return new int[]{j, map.get(diff)};
             }
         }
         // n times -> n+n times + space -> o(n)
@@ -45,7 +45,7 @@ public class TwoSumIndex {
             }
         }
 //        throw new IllegalArgumentException("No two sum solution");
-        return new int[] {-1,-1};
+        return new int[]{-1, -1};
     }
 
     public int[] twoSum1(int[] nums, int target) {

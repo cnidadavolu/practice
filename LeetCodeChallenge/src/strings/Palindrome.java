@@ -4,8 +4,11 @@ public class Palindrome {
 
 
     public static void main(String[] args) {
-        String input = "aaabaaaabaa";
+        String input = "A man, a plan, a canal: Panama";
         //String input = "";
+
+        System.out.println(input.replaceAll("[^\\x00-\\x7F]",""));
+
         Palindrome p = new Palindrome();
         System.out.println(p.isValidPalindrome(input));
     }

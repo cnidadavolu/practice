@@ -44,6 +44,31 @@ public class Streams {
         MyFunctionalInterface sum =  (int a, int b) -> a+b;
         System.out.println(sum);
 
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+        String s = "      ";
+        String [] arr = s.split(" ");
+        System.out.println(s.trim().isEmpty());
+        System.out.println("trim:"+s.trim()+"&&&&");
+        System.out.println("#############" +s.length());
+        System.out.println("#######" +arr.length);
+
+
+        int[] result = list.stream().mapToInt(i -> i).toArray();
+        System.out.println("*******&&&&&&&************");
+        for(int num: result){
+            System.out.println(num);
+        }
+        System.out.println("*********&&&&&&**********");
+
+
+
+
+
 //        public String getDay(int days, int months, int year){
 //
 //            Calendar cal = Calendar.getInstance();

@@ -1,5 +1,8 @@
 package strings;
 
+
+import java.util.LinkedList;
+
 public class Palindrome {
 
 
@@ -11,6 +14,9 @@ public class Palindrome {
 
         Palindrome p = new Palindrome();
         System.out.println(p.isValidPalindrome(input));
+
+
+        LinkedList list = new LinkedList();
     }
 
     public boolean isValidPalindrome(String s) {
